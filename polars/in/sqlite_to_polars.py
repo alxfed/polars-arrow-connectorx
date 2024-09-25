@@ -8,14 +8,14 @@ query1 = "SELECT * FROM payment_june_installs"
 
         # event_id, 
         # strftime('%m-%d-%Y %H:%M:%f', timestamp/1000.0, 'unixepoch')
-# query2 = "SELECT * FROM payment_july"
+query2 = "SELECT * FROM payment_july_installs"
 # query3 = "SELECT * FROM payment_august_installs"
 # query4 = "SELECT * FROM payment_september_installs"
 # query5 = "SELECT * FROM payment_october_installs"
 
-table = pl.read_sql(sql=[query1
-    # , query2, query3, query4, query5
-                         ], connection_uri=conn)
+table = pl.read_database_uri(query=[query1, query2
+    # , query3, query4, query5
+                         ], uri=conn)
 df = table.with_columns(
     [
         pl.col("timestamp").cast(pl.datatypes.Datetime),
