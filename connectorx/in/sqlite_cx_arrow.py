@@ -13,7 +13,7 @@ import polars as pl
 conn = "sqlite:///media/alxfed/data1/games/AC/sqlite/airport_payments.sqlite"
 sqlite_db_tables = [
     'payment_june_installs',
-    'payment_july',
+    'payment_july_installs',
     'payment_august_installs',
     'payment_september_installs',
     'payment_october_installs'
