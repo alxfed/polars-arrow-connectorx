@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-""" Through connectorx into Arrow with a .cast() and on to polars and pandas.
+""" Through connectorx into Arrow with a .cast() and on to polars and pand.
 """
 from typing import List, AnyStr
 from timeit import default_timer as deftimer
