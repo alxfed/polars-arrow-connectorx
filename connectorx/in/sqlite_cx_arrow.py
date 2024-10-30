@@ -91,5 +91,5 @@ def sqlite_cx_arrow(connection:str, queries:List[AnyStr]) -> Table:
 
 
 if __name__ == '__main__':
-    arrow_table = sqlite_cx_arrow(conn, queries)
+    table = sqlite_cx_arrow(conn, queries)
     print('ok')
